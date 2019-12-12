@@ -9,8 +9,12 @@
     "nosql",
     "serverless"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/manjunathjidagi/asteroid-db.git"
+  },
   "license": "ISC",
   "main": "index.js",
   "name": "asteroid-db",
-  "version": "0.0.1"
+  "version": "0.0.2"
 }
