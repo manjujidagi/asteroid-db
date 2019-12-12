@@ -1,0 +1,16 @@
+{
+  "author": {
+    "name": "Manjunath Jidagi"
+  },
+  "keywords": [
+    "asteroid-db",
+    "database",
+    "db",
+    "nosql",
+    "serverless"
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "name": "asteroid-db",
+  "version": "0.0.1"
+}
