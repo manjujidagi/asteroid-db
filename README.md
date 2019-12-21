@@ -40,11 +40,11 @@ AsteroidDB.test()
 // }
 
 
-bool mdb.create_catalogue(par_1, par_2, par_3, par_4))
+bool AsteroidDB.create_catalogue(par_1, par_2, par_3, par_4))
 
 
 // ----------- Example ----------------
-if(mdb.create_catalogue("my_db", "secure", "private", { "data" : { "username" : "hello", "password" : "world" }})){
+if(AsteroidDB.create_catalogue("my_db", "secure", "private", { "data" : { "username" : "hello", "password" : "world" }})){
 	console.log("Success")
 }
 else{
@@ -67,11 +67,11 @@ else{
 // }
 
 
-[false/array] mdb.read_catalogue(par_1, par_2, par_3, par_4))
+[false/array] AsteroidDB.read_catalogue(par_1, par_2, par_3, par_4))
 
 
 // ----------- Example ----------------
-var ret_data = mdb.read_catalogue("my_db", "secure", "private")
+var ret_data = AsteroidDB.read_catalogue("my_db", "secure", "private")
 console.log(ret_data)
 // ---------- Example Ends -------------
 ```
@@ -91,11 +91,11 @@ console.log(ret_data)
 // }
 
 
-bool mdb.update_catalogue(par_1, par_2, par_3, par_4))
+bool AsteroidDB.update_catalogue(par_1, par_2, par_3, par_4))
 
 
 // ----------- Example ----------------
-if(mdb.update_catalogue("my_db", "secure", "private", { "filter" : { "username" : "hello" }, "data" : { "password" : "myworld" }})){
+if(AsteroidDB.update_catalogue("my_db", "secure", "private", { "filter" : { "username" : "hello" }, "data" : { "password" : "myworld" }})){
 	console.log("Success")
 }
 else{
@@ -116,11 +116,11 @@ else{
 // }
 
 
-bool mdb.delete_catalogue(par_1, par_2, par_3, par_4))
+bool AsteroidDB.delete_catalogue(par_1, par_2, par_3, par_4))
 
 
 // ----------- Example ----------------
-if(mdb.delete_catalogue("my_db", "secure", "private", { "filter" : { "username" : "hello" }})){
+if(AsteroidDB.delete_catalogue("my_db", "secure", "private", { "filter" : { "username" : "hello" }})){
 	console.log("Success")
 }
 else{
@@ -144,11 +144,11 @@ else{
 // }
 
 
-bool mdb.replace_catalogue(par_1, par_2, par_3, par_4))
+bool AsteroidDB.replace_catalogue(par_1, par_2, par_3, par_4))
 
 
 // ----------- Example ----------------
-if(mdb.replace_catalogue("my_db", "secure", "private", { "filter" : { "username" : "hello" }, "data" : { "userid" : "hi buddy" }})){
+if(AsteroidDB.replace_catalogue("my_db", "secure", "private", { "filter" : { "username" : "hello" }, "data" : { "userid" : "hi buddy" }})){
 	console.log("Success")
 }
 else{
