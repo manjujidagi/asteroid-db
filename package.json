@@ -13,8 +13,20 @@
     "type": "git",
     "url": "https://github.com/manjunathjidagi/asteroid-db.git"
   },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "start:dev": "nodemon index.js"
+  },
   "license": "ISC",
   "main": "index.js",
   "name": "asteroid-db",
-  "version": "0.0.2"
+  "version": "1.0.0",
+  "dependencies": {
+    "canonical-path": "^1.0.0",
+    "is-subset": "^0.1.1",
+    "make-dir": "^3.0.0",
+    "output-file-sync": "^2.0.1",
+    "rmdir": "^1.2.0"
+  }
 }
