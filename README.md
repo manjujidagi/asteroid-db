@@ -2,7 +2,7 @@
 Server-less NoSQL Database
 
 ```javascript
-const AsteroidDB = require('./../index')
+const AsteroidDB = require('asteroid-db')
 ```
 
 **Set Development**

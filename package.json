@@ -21,7 +21,7 @@
   "license": "ISC",
   "main": "index.js",
   "name": "asteroid-db",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "dependencies": {
     "canonical-path": "^1.0.0",
     "is-subset": "^0.1.1",
