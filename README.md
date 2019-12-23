@@ -3,18 +3,20 @@ Server-less NoSQL Database
 
 ```javascript
 const AsteroidDB = require('asteroid-db')
+
+var adb = new AsteroidDB()
 ```
 
 **Set Development**
 
 ```javascript
-AsteroidDB.set_development(true)
+adb.set_development(true)
 ```
 
 **Test Connection**
 
 ```javascript
-AsteroidDB.test()
+adb.test()
 ```
 
 **Data Manipulation**
@@ -40,11 +42,11 @@ AsteroidDB.test()
 // }
 
 
-bool AsteroidDB.create_catalogue(par_1, par_2, par_3, par_4))
+bool adb.create_catalogue(par_1, par_2, par_3, par_4))
 
 
 // ----------- Example ----------------
-if(AsteroidDB.create_catalogue("my_db", "secure", "private", { "data" : { "username" : "hello", "password" : "world" }})){
+if(adb.create_catalogue("my_db", "secure", "private", { "data" : { "username" : "hello", "password" : "world" }})){
 	console.log("Success")
 }
 else{
@@ -67,11 +69,11 @@ else{
 // }
 
 
-[false/array] AsteroidDB.read_catalogue(par_1, par_2, par_3, par_4))
+[false/array] adb.read_catalogue(par_1, par_2, par_3, par_4))
 
 
 // ----------- Example ----------------
-var ret_data = AsteroidDB.read_catalogue("my_db", "secure", "private")
+var ret_data = adb.read_catalogue("my_db", "secure", "private")
 console.log(ret_data)
 // ---------- Example Ends -------------
 ```
@@ -91,11 +93,11 @@ console.log(ret_data)
 // }
 
 
-bool AsteroidDB.update_catalogue(par_1, par_2, par_3, par_4))
+bool adb.update_catalogue(par_1, par_2, par_3, par_4))
 
 
 // ----------- Example ----------------
-if(AsteroidDB.update_catalogue("my_db", "secure", "private", { "filter" : { "username" : "hello" }, "data" : { "password" : "myworld" }})){
+if(adb.update_catalogue("my_db", "secure", "private", { "filter" : { "username" : "hello" }, "data" : { "password" : "myworld" }})){
 	console.log("Success")
 }
 else{
@@ -116,11 +118,11 @@ else{
 // }
 
 
-bool AsteroidDB.delete_catalogue(par_1, par_2, par_3, par_4))
+bool adb.delete_catalogue(par_1, par_2, par_3, par_4))
 
 
 // ----------- Example ----------------
-if(AsteroidDB.delete_catalogue("my_db", "secure", "private", { "filter" : { "username" : "hello" }})){
+if(adb.delete_catalogue("my_db", "secure", "private", { "filter" : { "username" : "hello" }})){
 	console.log("Success")
 }
 else{
@@ -144,11 +146,11 @@ else{
 // }
 
 
-bool AsteroidDB.replace_catalogue(par_1, par_2, par_3, par_4))
+bool adb.replace_catalogue(par_1, par_2, par_3, par_4))
 
 
 // ----------- Example ----------------
-if(AsteroidDB.replace_catalogue("my_db", "secure", "private", { "filter" : { "username" : "hello" }, "data" : { "userid" : "hi buddy" }})){
+if(adb.replace_catalogue("my_db", "secure", "private", { "filter" : { "username" : "hello" }, "data" : { "userid" : "hi buddy" }})){
 	console.log("Success")
 }
 else{
