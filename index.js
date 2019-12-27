@@ -106,52 +106,6 @@ class AsteroidDB{
 
 	// ---------------- USE METHODS ----------------------------
 
-	use_db(db_name){
-		path1 = this.db_path+"/"+this.DATABASE
-		path2 = this.db_path+"/"+this.DATABASE+"/"+db_name
-		success = 0
-		
-		if(!(this.is_exists(path1))){
-			var created_path1 = makeDir.sync(path1)
-			if(!(created_path1 == path1)){
-				if(this.development)
-					console.log("[ERROR]-[Creating Master Folder Failed]")
-				return(false)
-			}
-			else{
-				success += 1
-			}
-		}
-		else{
-			success += 1
-		}
-
-		if(!(this.is_exists(path2))){
-			console.log("[ERROR]-[Database Not Found]")
-			return(false)
-		}
-		else{
-			success += 1
-		}
-
-		if(success == 2){
-			return(true)
-		}
-		else{
-			return(false)
-		}
-	}
-
-	use_exclusive(db_name, exclusive_name){
-		var path1 = this.db_path+"/"+this.DATABASE+"/"+db_name+"/"+exclusive_name
-		if(!(this.is_exists(path1))){
-			return(false)
-		}
-		else{
-			return(true)
-		}
-	}
-
 	use_catalogue_type(db_name, exclusive_name, cat_type){
 		var file_name = cat_type+".json"
 		var path1 = this.db_path+"/"+this.DATABASE+"/"+db_name+"/"+exclusive_name
@@ -442,18 +396,6 @@ class AsteroidDB{
 		outputFileSync(path, JSON.stringify(json), 'utf-8');
 		return(true)
 	}
-
-	// ------------------------ FUTURE DEVELOPMENT ---------------------------
-
-	export_db(db_name){
-		// THIS METHOD IS USEFUL WHEN WE MAKE THOSE .json FILES TO BINARY
-	}
-
-	import_db(db_name){
-		// THIS METHOD IS USEFUL WHEN WE MAKE THOSE .json FILES TO BINARY
-	}
-
-	// ---------------------- FUTURE DEVELOPMENT ENDS ---------------------
 
 	// =================== PUBLIC METHODS ENDS =========================
 
