@@ -26,6 +26,7 @@
     "canonical-path": "^1.0.0",
     "is-subset": "^0.1.1",
     "make-dir": "^3.0.0",
+    "node.extend": "^2.0.2",
     "output-file-sync": "^2.0.1",
     "rmdir": "^1.2.0"
   }
