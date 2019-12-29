@@ -1,6 +1,5 @@
 var fs = require('fs')
 var isSubset = require('is-subset')
-var rmdir = require('rmdir')
 var makeDir = require('make-dir')
 const outputFileSync = require('output-file-sync');
 var canonical_path = require('canonical-path')
@@ -14,20 +13,6 @@ class AsteroidDB{
 	}
 
 	// ================= PRIVATE METHODS ==========================
-
-	rrmdir(dir){
-		try{
-			rmdir(dir, (err, dirs, files) => {
-				return(true)
-			})
-		}
-		catch(e){
-			if(this.development){
-				console.log("[ERROR]-[RRMDIR]-[ERROR DELETING DIRECTORY]")
-			}
-			return(false)
-		}
-	}
 
 	is_exists(path){
 		if(fs.existsSync(path)){
