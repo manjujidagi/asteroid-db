@@ -7,7 +7,9 @@
     "database",
     "db",
     "nosql",
-    "serverless"
+    "serverless",
+    "localstorage-alternative",
+    "cookies-alternative"
   ],
   "repository": {
     "type": "git",
@@ -21,7 +23,7 @@
   "license": "ISC",
   "main": "index.js",
   "name": "asteroid-db",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "dependencies": {
     "canonical-path": "^1.0.0",
     "is-subset": "^0.1.1",
