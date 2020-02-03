@@ -32,6 +32,19 @@ class AsteroidDB{
 		}
 	}
 
+	recursive_keys_validity_check(json){
+		var keys = Object.keys(json)
+		for(var i=0; i<keys.length; i++){
+			if((keys[i].split(".")).length != 1 )
+				return false
+			if(typeof(json[keys[i]]) == "object"){
+				if(!(this.recursive_keys_validity_check(json[keys[i]])))
+					return false
+			}
+		}
+		return true
+	}
+
 	// ---------------- CREATE METHODS -------------------------
 
 
@@ -147,12 +160,23 @@ class AsteroidDB{
 				console.log("[WARNING]-[CREATE_CATALOGUE]-['filter' PROVIDED IN COMMAND WHICH IS NOT USED]")
 		}
 
-		if(command["data"] == undefined){
+		if(!("data" in command)){
 			if(this.development)
 				console.log("[ERROR]-[CREATE_CATALOGUE]-['data' NOT FOUND IN COMMAND WHICH IS MANDATORY]")
 			return(false)
 		}
 
+		if(typeof(command["data"]) != "object"){
+			if(this.development)
+				console.log("[ERROR]-[CREATE_CATALOGUE]-['data' IS NOT AN OBJECT]")
+			return(false)
+		}
+
+		if(!(this.recursive_keys_validity_check(command["data"]))){
+			if(this.development)
+				console.log("[ERROR]-[CREATE_CATALOGUE]-['data' OBJECT CONTAINS 'dot(.)' IN KEYS WHICH IS NOT ALLOWED]")
+			return(false)
+		}
 		
 		var path = this.db_path+"/"+this.DATABASE+"/"+db_name+"/"+exclusive_name+"/"+cat_type+".json"
 		var can_db_path = canonical_path.normalize(this.db_path)
