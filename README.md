@@ -47,10 +47,10 @@ bool adb.create_catalogue(par_1, par_2, par_3, par_4))
 
 // ----------- Example ----------------
 if(adb.create_catalogue("my_db", "secure", "private", { "data" : { "username" : "hello", "password" : "world" }})){
-	console.log("Success")
+	console.log("Catalogue Creation Successful")
 }
 else{
-	console.log("Failed")
+	console.log("Catalogue Creation Failed")
 }
 // ---------- Example Ends -------------
 ```
@@ -98,10 +98,10 @@ bool adb.update_catalogue(par_1, par_2, par_3, par_4))
 
 // ----------- Example ----------------
 if(adb.update_catalogue("my_db", "secure", "private", { "filter" : { "username" : "hello" }, "data" : { "password" : "myworld" }})){
-	console.log("Success")
+	console.log("Catalogue Update Successful")
 }
 else{
-	console.log("Failed")
+	console.log("Catalogue Update Failed")
 }
 // ---------- Example Ends -------------
 ```
@@ -123,10 +123,10 @@ bool adb.delete_catalogue(par_1, par_2, par_3, par_4))
 
 // ----------- Example ----------------
 if(adb.delete_catalogue("my_db", "secure", "private", { "filter" : { "username" : "hello" }})){
-	console.log("Success")
+	console.log("Catalogue Deletion Successful")
 }
 else{
-	console.log("Failed")
+	console.log("Catalogue Deletion Failed")
 }
 // ---------- Example Ends -------------
 ```
@@ -151,10 +151,10 @@ bool adb.replace_catalogue(par_1, par_2, par_3, par_4))
 
 // ----------- Example ----------------
 if(adb.replace_catalogue("my_db", "secure", "private", { "filter" : { "username" : "hello" }, "data" : { "userid" : "hi buddy" }})){
-	console.log("Success")
+	console.log("Catalogue Replace Successful")
 }
 else{
-	console.log("Failed")
+	console.log("Catalogue Replace Failed")
 }
 // ---------- Example Ends -------------
 ```
